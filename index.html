@@ -3,6 +3,21 @@
         
     </head>
     <body>
-        This is the master's thesis of the biggest on9 in the world: 
+        <canvas id="x"></canvas>
+        <script>
+            i = 0
+            function f() {
+                console.log('entered function');
+                const canvas = document.getElementById("x");
+                const ctx = canvas.getContext('2d');
+                ctx.fillRect(100, 100, 200, 0);
+                console.log(i)
+                ctx.fillRect(100, 100, 200, i);
+                i += 10;
+            }
+
+            window.setInterval(f, 1000);
+
+        </script>
     </body>
 </html>
